@@ -1,97 +1,189 @@
-# MalJPEG: Machine Learning Based Solution for Detection of Malicious JPEG Images
+🛡️ MalJPEG: Machine Learning-Based Detection of Malicious JPEG Images
+📌 Project Overview
 
-## Overview
+MalJPEG is a cybersecurity-focused machine learning project developed to identify malicious JPEG images by analyzing their internal file structure, metadata, and marker-based characteristics.
 
-MalJPEG is a cybersecurity and machine learning project designed to detect malicious JPEG images by analyzing JPEG file structures, metadata, and marker-based characteristics. Attackers often embed malicious payloads within JPEG files to bypass traditional security mechanisms. This project uses machine learning techniques to distinguish between benign and malicious JPEG images.
+Cyber attackers increasingly use image files as carriers for hidden malicious payloads because they appear harmless to users and can bypass traditional security mechanisms. This project leverages machine learning techniques to analyze JPEG-specific features and accurately classify images as Benign or Malicious.
 
-## Problem Statement
+The project was further enhanced with advanced feature extraction, additional machine learning models, metadata analysis, and visual comparison capabilities to improve detection performance and interpretability.
 
-JPEG images are widely used across websites, social media platforms, and communication applications. Cyber attackers can exploit JPEG file structures to conceal malware and malicious code. Traditional antivirus solutions may fail to identify these threats, making automated machine learning-based detection essential.
+🎯 Problem Statement
 
-## Objectives
+JPEG images are among the most commonly shared file formats on the internet. Attackers can exploit JPEG file structures to hide malicious payloads within image metadata, markers, or unused file segments.
 
-* Detect malicious JPEG images using machine learning.
-* Extract JPEG marker-based features.
-* Compare benign and malicious image characteristics.
-* Improve cybersecurity defenses against image-based attacks.
+Traditional antivirus systems primarily rely on signature-based detection and often fail to identify image-based threats.
 
-## Technologies Used
+The challenge is to develop an intelligent detection system capable of distinguishing malicious JPEG images from legitimate ones using machine learning and JPEG structural analysis.
 
-* Python
-* Google Colab
-* NumPy
-* Pandas
-* OpenCV
-* Scikit-Learn
-* XGBoost
-* LightGBM
-* Matplotlib
+🎯 Objectives
+Detect malicious JPEG images using Machine Learning.
+Analyze JPEG file structures and metadata.
+Extract marker-based features from image files.
+Compare benign and malicious JPEG characteristics.
+Evaluate multiple machine learning algorithms.
+Improve image-based malware detection techniques.
+Visualize classification results using graphs and comparison tools.
+🏗️ Existing Project
 
-## Dataset
+The existing implementation focuses on extracting fundamental JPEG marker-based features and classifying images using traditional machine learning models.
 
-The project utilizes:
+Features Used
+DQT (Define Quantization Table)
+DHT (Define Huffman Table)
+APP1 Marker Count
+COM Marker Count
+Total JPEG Marker Count
+Algorithms Used
+Random Forest Classifier
+LightGBM Classifier
+Workflow
+Dataset Collection
+JPEG Feature Extraction
+Feature Preprocessing
+Model Training
+Classification
+Accuracy Evaluation
+Result Visualization
+🚀 Enhanced Project
 
-1. Oxford5k Dataset (Benign Images)
-2. Malware Benign Image Sample Dataset
+The enhanced version extends the capabilities of the original system through advanced feature extraction, additional machine learning algorithms, payload simulation, and visualization techniques.
 
-These datasets provide a balanced collection of benign and malicious JPEG images for training and evaluation.
+Additional Enhancements
 
-## Feature Extraction
+✅ EXIF Metadata Analysis
 
-Features extracted from JPEG files include:
+✅ Entropy-Based Features
 
-* DQT Marker Count
-* DHT Marker Count
-* APP Marker Analysis
-* COM Marker Analysis
-* JPEG Segment Sizes
-* Metadata Characteristics
-* Entropy-Based Features
-* Marker Frequency Analysis
+✅ JPEG Segment Size Analysis
 
-## Machine Learning Models
+✅ Payload Injection Simulation
 
-The following models were evaluated:
+✅ Benign vs Malicious Image Comparison
 
-* Random Forest Classifier
-* Logistic Regression
-* XGBoost Classifier
-* LightGBM Classifier
+✅ Dynamic Image Selection
 
-## Results
+✅ Accuracy Graph Visualization
 
-The trained models successfully distinguished malicious JPEG images from benign images using extracted JPEG structural features.
+✅ Multi-Model Performance Comparison
 
-Performance metrics evaluated:
+Advanced Features Extracted
+Feature	Description
+DQT_num	Number of Quantization Tables
+DHT_num	Number of Huffman Tables
+APP1_num	APP1 Marker Frequency
+COM_num	Comment Marker Frequency
+Marker_total	Total JPEG Marker Count
+EXIF Size	Metadata Size
+EXIF Presence	Whether Metadata Exists
+Entropy	Randomness Measure
+Bytes After EOI	Hidden Data Detection
+Segment Statistics	JPEG Structural Analysis
+📂 Dataset
+Benign Images
+Oxford5K Dataset
+Real-world JPEG images
+Building and landscape photographs
+Used as clean image samples
+Malicious Images
+Malware Benign Image Sample Dataset
+Malware-related image samples
+Used for malicious image analysis
+Includes hidden payload characteristics
+⚙️ Technologies Used
+Python
+Google Colab
+NumPy
+Pandas
+OpenCV
+Matplotlib
+Pillow (PIL)
+Scikit-Learn
+LightGBM
+XGBoost
+🤖 Machine Learning Models
+Existing Project
+Random Forest
+LightGBM
+Enhanced Project
+Random Forest
+LightGBM
+Logistic Regression
+XGBoost
+🔄 Project Workflow
+Dataset Collection
+        ↓
+JPEG Feature Extraction
+        ↓
+Metadata Analysis
+        ↓
+Feature Engineering
+        ↓
+Data Preprocessing
+        ↓
+Model Training
+        ↓
+Classification
+        ↓
+Performance Evaluation
+        ↓
+Visualization & Analysis
+📊 Performance Metrics
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* ROC-AUC
+The following evaluation metrics were used:
 
-## Project Workflow
+Accuracy
+Precision
+Recall
+F1-Score
+ROC-AUC Score
+📈 Visualizations
 
-1. Dataset Collection
-2. JPEG Feature Extraction
-3. Data Preprocessing
-4. Feature Engineering
-5. Model Training
-6. Model Evaluation
-7. Visualization and Analysis
+The project generates:
 
-## Future Enhancements
+Accuracy Comparison Graphs
+ROC Curves
+Feature Importance Graphs
+Benign vs Malicious Image Comparison
+Existing vs Enhanced Model Comparison
+🔐 Cybersecurity Significance
 
-* Deep Learning-Based Detection
-* Real-Time Image Scanning
-* Streamlit Web Application
-* Malware Family Classification
-* Hybrid Static and Dynamic Analysis
+This project demonstrates how machine learning can be applied to identify malicious JPEG images that appear visually identical to legitimate images.
 
-## Author
+The proposed solution can be integrated into:
+
+Email Security Systems
+Malware Analysis Platforms
+Digital Forensics Tools
+Web Application Security
+Secure File Upload Systems
+🔮 Future Enhancements
+Deep Learning-Based Detection (CNN)
+Real-Time Image Scanner
+Streamlit Web Application
+Malware Family Classification
+Hybrid Static and Dynamic Analysis
+Cloud-Based Detection Service
+API Integration for Security Platforms
+📚 Research Contribution
+
+This project contributes to the field of:
+
+Cybersecurity
+Malware Analysis
+Digital Forensics
+Machine Learning-Based Threat Detection
+Image-Based Malware Research
+👩‍💻 Author
 
 Srija Bojja
+B.Tech – Information Technology
 
-B.Tech Information Technology
+Areas of Interest
 
-Cybersecurity & Data Analytics Enthusiast
+Cybersecurity
+Data Analytics
+Machine Learning
+Digital Forensics
+Artificial Intelligence
+
+⭐ MalJPEG demonstrates how machine learning can transform traditional image security by detecting hidden threats embedded within seemingly harmless JPEG files.
