@@ -1,4 +1,5 @@
 🛡️ MalJPEG: Machine Learning-Based Detection of Malicious JPEG Images
+
 📌 Project Overview
 
 MalJPEG is a cybersecurity-focused machine learning project developed to identify malicious JPEG images by analyzing their internal file structure, metadata, and marker-based characteristics.
